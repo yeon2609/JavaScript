@@ -14,24 +14,23 @@
 // 결과) 분: ~~ 초: ~~
 
 // 1
-const one_side = Number(window.prompt("한 변의 길이: "))
-window.console.log(`한 변의 길이 ${one_side}인 정사각형의 넓이:${one_side*one_side}`)
+const side = window.prompt("한 변의 길이 : ")
+window.console.log(`한 변의 길이 ${side}인 정사각형의 넓이:${side*side}`)
 
 // 2
-const bottom = Number(window.prompt("밑변: "))
-const height = Number(window.prompt("높이: "))
-window.console.log(`밑변 ${bottom}과 높이 ${height}인 삼각형의 넓이:${bottom*height/2}`)
+const bottom = window.prompt("밑변 : ")
+const height = window.prompt("높이 : ")
+window.console.log(`밑변 ${bottom}과 높이 ${height}인 삼각형의 넓이:${(bottom*height)/2}`)
 
 // 3
-const won = Number(window.prompt("원화 입력: "))
+const won = window.prompt("원화 : ")
 window.console.log(`${won}원은 ${won*9.33}엔 입니다!`)
 
 // 4
-const stature = Number(window.prompt("키: "))
-const weight = Number(window.prompt("몸무게: "))
-const bmi = weight / (stature * stature)
-window.console.log(`키:${stature} 몸무게:${weight} BMI:${bmi}`)
+const height1 = window.prompt("키 : ")
+const weight = window.prompt("몸무게 : ")
+window.console.log(`키:${height1} 몸무게:${weight} BMI:${weight/(height1*height1)}`)
 
 // 5
-const min = Number(window.prompt("몇분: "))
+const min = window.prompt("몇분 : ")
 window.console.log(`분:${min} 초:${min*60}`)

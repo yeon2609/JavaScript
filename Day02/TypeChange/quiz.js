@@ -9,3 +9,13 @@ window.alert(`첫번째숫자 ${num1} + 두번째숫자 ${num2} = 결과 : ${num
 const age = Number(prompt("나이는?"))
 const year = 2025 - age - 1
 window.alert(`귀하의 태어난 년도는 ${year}년도 입니다!`)
+
+
+const number1 = Number(window.prompt("첫번째 숫자 : "))
+const number2 = Number(window.prompt("두번째 숫자 : "))
+const result = number1 + number2
+window.alert(`첫번째 숫자 ${number1} + 두번째 숫자 ${number2} = 결과:${result}`)
+
+const age1 = Number(window.prompt("나이를 입력하세요 : "))
+const year1 = 2025 - age1 - 1
+window.alert(`태어난 년도는 ${year1}년도 입니다!`)
