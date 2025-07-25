@@ -4,5 +4,5 @@ test.map((x, i) => i); // [0, 1, 2, 3, 4]
 
 
 const num = "123456789"; // -> "123456***"
-const quiz = [...num].map((x, i) => i > 5 ? "*" : x).join("");
+const quiz = [...num].map((x, i) => num.length - 3 > i ? x : '*').join('');
 window.console.log(quiz)

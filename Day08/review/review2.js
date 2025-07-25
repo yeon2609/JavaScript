@@ -1012,16 +1012,16 @@ const quiz1 = data.filter((x) => x.fullname.length > 15 && x.gender == 'Male');
 window.console.log(quiz1);
 
 // 2.
-const quiz2 = data.filter((x) => (x.department == 'Marketing' || x.department == 'Accounting') && (x.gender == 'Female' && x.language == 'English'));
+const quiz2 = data.filter((x) => (x.department == 'Marketing' || x.department == 'Accounting') && (x.gender == 'Male' && x.language == 'English'));
 window.console.log(quiz2);
 
 // 3.
-const quiz3 = data.filter((x) => Number(x.money.replace('$', "")) > 5000).map((x) => {return {fullname : x.fullname, department : x.department}});
+const quiz3 = data.filter((x) => Number(x.money.replace('$','')) > 5000).map((x) => {return {fullname : x.fullname, department : x.department}});
 window.console.log(quiz3);
 
 // 4. 
-const quiz4 = data.filter((x) => (x.fullname.startsWith('A') || x.fullname.startsWith('E') || x.fullname.startsWith('I')) && Number(x.money.replace('$', "")) < 3000);
-window.console.log(quiz4)
+const quiz4 = data.filter((x) => (x.fullname.startsWith('A') || x.fullname.startsWith('E') || x.fullname.startsWith('I')) && +(x.money.replace('$', '')) < 3000);
+window.console.log(quiz4);
 
 // 5.
-const quiz5 = data.filter((x) => x.creditcard)
+// const quiz5 = data.filter((x) => [...x.creditcard].map((x, i) => x.creditcard.length - 4 > i ? x : '*')).reduce

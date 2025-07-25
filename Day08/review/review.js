@@ -12,17 +12,14 @@ const cafeMenu = [
 // 4. '설탕' 성분이 들어간 메뉴만 이름과 가격 객체 배열로 만들기
 
 // 1.
-const quiz1 = cafeMenu.filter((x) => x.ingredients.some((v) => v == '우유'));
+const quiz1 = cafeMenu.filter((x) => x.ingredients.some((v) => v == '우유')).map((x) => {return name = x.name});
 window.console.log(quiz1);
-
 // 2.
-const quiz2 = cafeMenu.filter((x) => x.ingredients.every((v) => v != '에스프레소') && x.isIce);
+const quiz2 = cafeMenu.filter((x) => x.ingredients.every((v) => v != '에스프레소') && x.isIce).map((x) => {return name = x.name});
 window.console.log(quiz2);
-
 // 3. 
-const quiz3 = cafeMenu.filter((x) => x.ingredients.every((v) => v != '우유') && x.calories < 100);
+const quiz3 = cafeMenu.filter((x) => x.calories < 100 && x.ingredients.every((v) => v != '우유')).map((x) => {return name = x.name});
 window.console.log(quiz3);
-
 // 4. 
-const quiz4 = cafeMenu.filter((x) => x.ingredients.some((v) => v == '설탕')).map((y) => {return {name : y.name, price : y.price}});
+const quiz4 = cafeMenu.filter((x) => x.ingredients.some((v) => v == '설탕')).map((x) => {return {name : x.name, price : x.price}});
 window.console.log(quiz4);

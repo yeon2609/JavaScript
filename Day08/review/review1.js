@@ -14,13 +14,10 @@ const nintendo = [
 // 1.
 const quiz1 = nintendo.filter((x) => x.price <= 60000 && x.multiplayer);
 window.console.log(quiz1);
-
 // 2.
-const quiz2 = nintendo.filter((x) => x.genre.includes('어드벤처') && x.price >= 60000);
+const quiz2 = nintendo.filter((x) => x.genre.some((v) => v == '어드벤처') && x.price >= 60000);
 window.console.log(quiz2);
-
 // 3.
-const quiz3 = nintendo.filter((x) => !x.multiplayer && x.genre.some((v) => v == '어드벤처'));
+const quiz3 = nintendo.filter((x) => !x.multiplayer && x.genre.some((v) => v =='어드벤처'));
 window.console.log(quiz3);
-
 
